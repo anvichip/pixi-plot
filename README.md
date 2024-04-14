@@ -6,6 +6,7 @@
 3. LORA Model (alternative to text-embeddings, will need to read more about it)
 4. Stable Diffusion current version working fine but explore the new one
 5. https://www.deepset.ai/blog/rag-llm-evaluation-groundedness - read
+6. Get summary like - https://www.cliffsnotes.com/
 
 
 ### Pipe Line
