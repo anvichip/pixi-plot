@@ -7,6 +7,7 @@
 4. Stable Diffusion current version working fine but explore the new one
 5. https://www.deepset.ai/blog/rag-llm-evaluation-groundedness - read
 6. Get summary like - https://www.cliffsnotes.com/
+7. kuch toh bol rahe hai yeh uncle - https://community.openai.com/t/new-approach-to-summarize-books/611668
 
 
 ### Pipe Line
