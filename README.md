@@ -11,6 +11,8 @@
 8. Summarize Books - Article - https://levelup.gitconnected.com/build-an-ai-tool-to-summarize-books-instantly-828680c1ceb4
 9. Concatenate Images - https://note.nkmk.me/en/python-pillow-concat-images/
 10. Model Evaluation - https://github.com/salesforce/booksum
+11. LLM'S to use - https://www.datacamp.com/blog/top-open-source-llms
+12. 
 
 ### Pipe Line
 
