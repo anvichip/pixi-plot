@@ -9,6 +9,7 @@
 6. Get summary like - https://www.cliffsnotes.com/
 7. kuch toh bol rahe hai yeh uncle - https://community.openai.com/t/new-approach-to-summarize-books/611668
 8. Summarize Books - Article - https://levelup.gitconnected.com/build-an-ai-tool-to-summarize-books-instantly-828680c1ceb4
+9. Concatenate Images - https://note.nkmk.me/en/python-pillow-concat-images/
 
 
 ### Pipe Line
