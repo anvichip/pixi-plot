@@ -219,7 +219,7 @@ class depModal:
             ##Summarizer
             template_summary = """
             <s>[INST] <<SYS>>
-            You are an expert act as a book chapter summarizer, and summarize the text given.
+            You are an expert acting as a book chapter summarizer, your task is to give the important points that will act as summary to the book.
             <</SYS>>
 
             {text} [/INST]
@@ -250,8 +250,7 @@ class depModal:
             ##panels formation
             template_panel = """
             <s>[INST] <<SYS>>
-            This is the summary of a book chapter. I want to visualize the story using panels. Divide the summary into scenes which can be represented using panels, return all the panels in JSON format.
-
+            This is the summary. Concise this into maximum 3 important points.
             {text} [/INST]
             """
 
@@ -265,8 +264,7 @@ class depModal:
 
             template_prompts = """
             <s>[INST] <<SYS>>
-            Act as the assistant to a painter. I am giving you some image descriptions, Change them to very simple prompts not decriptive for a painter to draw.
-
+            You are a illustrator who makes stories for children. I am giving you some scene descriptions, change them to a very simple single prompt to visualize that scene.
             {text} [/INST]
             """
 
@@ -309,22 +307,23 @@ class depModal:
             llm_chain_panel = LLMChain(prompt=prompt_panel, llm=llm)
             # path = '/root/summaries/'
             scenes = []
-            print("Data of type " + str(type(text)) +" received")
+            # print("Data of type " + str(type(text)) +" received")
             for i in text:
                 print("i is of type  " + str(type(i)))
-                print(i)
-                print("Test 1")
+                # print(i)
+                # print("Test 1")
                 # scene = self.generate_panels(llm_chain_panel, str(i))
                 # ==== Alt code ====
                 output = llm_chain_panel.run(i)
-                print("Ran that shit")
+                # print("Ran that shit")
                 extract = output.split('[/INST]')
-                print(extract[1])
+                
+                # print(extract[1])
                 # return extract[1]
                 # ===================
                 # print("Test 2")
-                # scenes.append(scene)
-                print("Scene has been appended")
+                scenes.append(extract[1])
+                # print("Scene has been appended")
 
             # print(os.listdir(path))
             # for i in os.listdir(path):
