@@ -1,5 +1,6 @@
 from pptx import Presentation
 from pptx.util import Inches, Pt
+import os
 
 def add_slide(prs, image_path, text):
     slide_layout = prs.slide_layouts[6]  # Use the layout for title and content
@@ -19,17 +20,20 @@ def add_slide(prs, image_path, text):
     p.font.size = Pt(24)  # Increase font size to 24 points
     p.alignment = 1  # Center alignment
 
-def ppt_main(existing_pptx, image_paths, texts):
+def ppt_main(texts):
+    images_dir = 'out'
+    images_path = os.listdir(images_dir)
+    existing_pptx = "pixi-plot\template_ppt.pptx"
     prs = Presentation(existing_pptx)
     
-    for image_path, text in zip(image_paths, texts):
+    for image_path, text in zip(images_path, texts):
         add_slide(prs, image_path, text)
 
     prs.save('output.pptx')
 
 
-existing_pptx = "template_ppt.pptx"
-image_paths = ["generated-1.png", "generated-1.png", "generated-1.png"]  # List of image paths
-texts = ["Text 1", "Text 2", "Text 3"]  # List of corresponding texts
+# existing_pptx = "template_ppt.pptx"
+# image_paths = ["generated-1.png", "generated-1.png", "generated-1.png"]  # List of image paths
+# texts = ["Text 1", "Text 2", "Text 3"]  # List of corresponding texts
 
-ppt_main(existing_pptx, image_paths, texts)
+# ppt_main(existing_pptx, image_paths, texts)
