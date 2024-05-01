@@ -1,4 +1,10 @@
-# pixi-plot
+# Pixi-Plot
+An end-to-end project which converts novels, story books or any peice of text into a panel of images with descriptions.
+
+### Technologies Used
+Llama2: Used to extracting summaries and create important points to the story
+Stable Diffusion: Used to generate images to visualize the story
+PPTX: Used to compile the images into a final PPT file
 
 ### To - DO
 1. Explore text embeddings - Dense and Sparse
