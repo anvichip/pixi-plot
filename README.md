@@ -2,9 +2,10 @@
 An end-to-end project which converts novels, story books or any peice of text into a panel of images with descriptions.
 
 ### Technologies Used
-Llama2: Used to extracting summaries and create important points to the story
-Stable Diffusion: Used to generate images to visualize the story
-PPTX: Used to compile the images into a final PPT file
+1. Llama2: Used to extracting summaries and create important points to the story
+2. Stable Diffusion: Used to generate images to visualize the story
+3. PPTX Module (Python): Used to compile the images into a final PPT file
+4. HTML/CSS: Front-end
 
 ### To - DO
 1. Explore text embeddings - Dense and Sparse
