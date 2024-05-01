@@ -7,7 +7,7 @@ An end-to-end project which converts novels, story books or any peice of text in
 3. PPTX Module (Python): Used to compile the images into a final PPT file
 4. HTML/CSS: Front-end
 
-### To - DO
+### To-Do
 1. Explore text embeddings - Dense and Sparse
 2. https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 - new model for text embeddings try it out
 3. LORA Model (alternative to text-embeddings, will need to read more about it)
