@@ -10,9 +10,5 @@
         "app.py", {
             "maxDuration": 900
         }
-    ],
-    "rewrites": [
-        {"source": "/(.*)", "destination": "/"}
     ]
-
 }
