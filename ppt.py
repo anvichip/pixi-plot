@@ -7,11 +7,11 @@ def clean_input(final_prompts):
     final_prompts_lists = [ast.literal_eval(prompts) for prompts in final_prompts]
     flat_prompts = [item for sublist in final_prompts_lists for item in sublist]
     individual_prompts = [prompt.strip() for sublist in flat_prompts for prompt in sublist.split('\n') if prompt.strip()]
-    print("Prompts after cleaning" + str(individual_prompts))
+    print("Panels after cleaning" + str(individual_prompts))
 
     
-    print("Final Prompts for SDXL" + str(individual_prompts))
-    print("Len of prompts " + str(len(individual_prompts)))
+    print("Final Panels for SDXL" + str(individual_prompts))
+    print("Len of Panels " + str(len(individual_prompts)))
     return individual_prompts[1::]
 
 # def clean_input_ppt(text):
@@ -43,7 +43,7 @@ def add_slide(prs, image_path, text):
     slide.shapes.add_picture(image_path, left_inch, top_inch, Inches(6), Inches(4.5))
 
     # Add text box below image
-    txBox = slide.shapes.add_textbox(left_inch, top_inch + Inches(4.5), Inches(6), Inches(1))
+    txBox = slide.shapes.add_textbox(left_inch / 2, top_inch + Inches(4.5), Inches(6), Inches(1))
     tf = txBox.text_frame
     p = tf.add_paragraph()
     p.text = text
@@ -62,7 +62,7 @@ def ppt_main(texts):
         image_path = os.path.join(images_dir, image_path)
         add_slide(prs, image_path, text)
 
-    prs.save('output_new.pptx')
+    prs.save('pixi-plot/output.pptx')
     # print(reqd_text)
 
 

@@ -52,7 +52,7 @@ def clean_input(final_prompts):
     individual_prompts = [prompt.strip() for sublist in flat_prompts for prompt in sublist.split('\n') if prompt.strip()]
     print("Prompts after cleaning" + str(individual_prompts))
 
-    generate_images_from_text_prompts(individual_prompts)
+    generate_images_from_text_prompts(individual_prompts[1::])
 
 def generate_images_from_text_prompts(text_prompts_list):
     engine_id = "stable-diffusion-v1-6"
@@ -107,6 +107,7 @@ def generate_images_from_text_prompts(text_prompts_list):
 # flat_prompts = [item for sublist in final_prompts_lists for item in sublist]
 # individual_prompts = [prompt.strip() for sublist in flat_prompts for prompt in sublist.split('\n') if prompt.strip()]
 # final_prompts=['["\\n             Sure, here are the three most important points from Chapter 1 of \\"The Adventures of Tom Sawyer\\":\\n\\n1. Tom Sawyer is punished for not going to school by having to paint a fence.\\n2. Tom\'s friend Jim declines to paint the fence with him.\\n3. Tom trades the task of painting the fence for food and other boys come to watch and offer to paint themselves."]', '["\\n             Sure, here are the three simple prompts for the scene descriptions you provided:\\n\\n1. Tom paints a fence, making it beautiful and white, and his aunt is surprised and happy.\\n2. Tom plays with his friend Joe, highlighting his love for adventure and friendship.\\n3. A new girl moves in with yellow hair and blue eyes, but Tom can\'t talk to her."]', '["\\n            1. Tom runs late due to friend.\\n2. Tom talks to new classmate.\\n3. Tom invites classmate to walk with him."]', '["\\n             Sure, here are the 3 most important points from Chapter 3 of \\"The Adventures of Tom Sawyer\\":\\n\\n1. Tom and Huck witness a crime, but are too afraid to speak up.\\n2. Tom is haunted by his guilt and fear.\\n3. Tom and Huck keep their secret hidden from their friends and family."]', '["\\n             Sure, here is a simple prompt for each scene:\\n\\nScene 1: Three friends run away and feel free.\\n\\nScene 2: Friends cross river and feel happy, decide to stay.\\n\\nScene 3: Friends hear boat noise and become curious."]']
+# clean_input(final_prompts)
 # individual_prompts = ['1. Tom Sawyer is punished for not going to school by having to paint a fence.',
 #  "2. Tom's friend Jim declines to paint the fence with him.",
 #  '3. Tom trades the task of painting the fence for food and other boys come to watch and offer to paint themselves.',

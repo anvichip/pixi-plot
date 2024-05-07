@@ -3,8 +3,8 @@ from sdxl import clean_input, generate_images_from_text_prompts
 from ppt import ppt_main
 
 # Function to process the uploaded PDF file
-def main_flask():
-    pdf_path = input("Enter PDF Path ")
+def main_flask(pdf_path):
+    # pdf_path = input("Enter PDF Path ")
     # Call LLM API to process the PDF and get the output text
     # llm_output, ppt_text = call_llm_api(pdf_path)
     ppt_text, prompts = call_llm_api(pdf_path)
@@ -18,4 +18,4 @@ def main_flask():
     ppt_main(ppt_text)
 
 
-main_flask()
+# main_flask()
