@@ -4,3 +4,4 @@ langchain
 langchain-community
 streamlit
 streamlit-ace
+pypdf
