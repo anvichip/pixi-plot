@@ -1,0 +1,6 @@
+Flask
+python-pptx
+langchain
+langchain-community
+streamlit
+streamlit-ace
